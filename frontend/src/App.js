@@ -18,9 +18,7 @@ const EMPTY_FORM = {
 
 const yearsInBusiness = new Date().getFullYear() - companyInfo.establishedYear;
 
-const directionsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  companyInfo.address
-)}`;
+const directionsLink = companyInfo.mapsUrl;
 
 function parseCsv(text) {
   const rows = [];
@@ -527,6 +525,9 @@ function App() {
         <div>
           <strong>{companyInfo.name}</strong>
           <p>{companyInfo.tagline}</p>
+          <p className="footer__meta">
+            Proprietor: {companyInfo.proprietor} · GSTIN: {companyInfo.gstin}
+          </p>
         </div>
         <address>
           <span>{companyInfo.address}</span>

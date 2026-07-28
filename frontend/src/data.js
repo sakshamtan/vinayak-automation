@@ -5,9 +5,12 @@ export const companyInfo = {
   whatsapp: "919818092533",
   email: "vinayakautomation10@gmail.com",
   timing: "Mon - Sat, 10:00 AM - 6:00 PM",
-  address: "Near BBM Depot, Indra Vihar, Delhi",
-  establishedYear: 2012,
+  address: "Plot No. 461, Indira Vihar, Dr Mukherjee Nagar, Near BBM Depot, Delhi - 110009",
+  mapsUrl: "https://maps.app.goo.gl/TfHSWKaDjoAxuLsh6",
+  establishedYear: 2010,
   serviceArea: "Delhi NCR and industrial customers across India",
+  gstin: "07ACRPT1554D1ZE",
+  proprietor: "Jogender Taneja",
   // Point this at a Google Sheet published as CSV (File > Share > Publish to web > CSV)
   // so the catalogue can be updated without a redeploy. See CATALOG_UPDATE_GUIDE.md.
   // Left as the local starter file until that's set up.
@@ -32,6 +35,7 @@ export const businessHighlights = [
 
 export const trustedCategories = [
   "AC Drives",
+  "PLC & HMI",
   "Control Panels",
   "Motors",
   "Transformers",

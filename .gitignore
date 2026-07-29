@@ -2,7 +2,7 @@
 node_modules/
 
 # Production build
-/frontend/build
+/build
 
 # Environment files
 .env

@@ -8,7 +8,6 @@ A single static website that showcases the product catalogue and captures pricin
 ## Run it locally
 
 ```bash
-cd frontend
 npm install
 npm start
 ```
@@ -21,7 +20,6 @@ Visit http://localhost:3000.
 2. In the [Cloudflare dashboard](https://dash.cloudflare.com/), go to **Workers & Pages -> Create -> Pages -> Connect to Git** and select the repo.
 3. Build settings:
    - Framework preset: `Create React App`
-   - Root directory: `frontend`
    - Build command: `npm run build`
    - Build output directory: `build`
 4. Deploy. Cloudflare gives you a free `*.pages.dev` URL immediately.
@@ -31,7 +29,7 @@ Every future `git push` automatically redeploys the site. Since the catalogue li
 
 ## One-time setup before going live
 
-Two things need a value filled in before the site is fully "live" (the site works without them, just with reduced functionality) - both are in [`frontend/src/data.js`](./frontend/src/data.js):
+Two things need a value filled in before the site is fully "live" (the site works without them, just with reduced functionality) - both are in [`src/data.js`](./src/data.js):
 
 1. `companyInfo.catalogueUrl` - point at your published Google Sheet CSV link.
 2. `leadConfig.web3formsAccessKey` - your free Web3Forms access key, so enquiries email you directly.
@@ -40,7 +38,6 @@ Full step-by-step instructions for both are in [CATALOG_UPDATE_GUIDE.md](./CATAL
 
 ## Project structure
 
-- `frontend/` - the React app (the entire website)
-  - `frontend/src/data.js` - business info, contact details, and the two settings above
-  - `frontend/src/App.js` - page logic (catalogue fetch/search, enquiry form)
-  - `frontend/public/catalog.csv` - starter/example catalogue, used until the Google Sheet is configured
+- `src/data.js` - business info, contact details, and the two settings above
+- `src/App.js` - page logic (catalogue fetch/search, enquiry form)
+- `public/catalog.csv` - starter/example catalogue, used until the Google Sheet is configured

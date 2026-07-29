@@ -9,7 +9,7 @@ The website reads its product list live from a Google Sheet, so updating product
 ### One-time setup
 
 1. Create a new Google Sheet.
-2. Set up these column headers in row 1 (matching `frontend/public/catalog.csv`, which you can open in Excel to see an example):
+2. Set up these column headers in row 1 (matching `public/catalog.csv`, which you can open in Excel to see an example):
 
    | sku | name | category | brand | shortDescription | image | availability | tags |
    |---|---|---|---|---|---|---|---|
@@ -27,7 +27,7 @@ The website reads its product list live from a Google Sheet, so updating product
 
 3. Publish the sheet as CSV: **File -> Share -> Publish to web**. Under "Link", choose the correct sheet/tab and select **Comma-separated values (.csv)**, then click **Publish**.
 4. Copy the generated link (it looks like `https://docs.google.com/spreadsheets/d/e/xxxxx/pub?output=csv`).
-5. Open `frontend/src/data.js` and paste it as `catalogueUrl`:
+5. Open `src/data.js` and paste it as `catalogueUrl`:
 
    ```js
    catalogueUrl: "https://docs.google.com/spreadsheets/d/e/xxxxx/pub?output=csv",
@@ -53,7 +53,7 @@ When a visitor selects products and submits the enquiry form, the site can email
 
 1. Go to [web3forms.com](https://web3forms.com) and enter the email address where you want to receive enquiries.
 2. You'll get an **Access Key** by email - copy it.
-3. Open `frontend/src/data.js` and paste it in:
+3. Open `src/data.js` and paste it in:
 
    ```js
    web3formsAccessKey: "your-access-key-here",

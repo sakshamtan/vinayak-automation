@@ -14,13 +14,13 @@ export const companyInfo = {
   // Point this at a Google Sheet published as CSV (File > Share > Publish to web > CSV)
   // so the catalogue can be updated without a redeploy. See CATALOG_UPDATE_GUIDE.md.
   // Left as the local starter file until that's set up.
-  catalogueUrl: "/catalog.csv",
+  catalogueUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRLMCmS1rfKEcndCtsOLrrRP-Ztf3MFsFRhpiWta3VUqCQzm6asw-gRnL2gXHCe17eqSfJe9-WiQ6T/pub?gid=748339378&single=true&output=csv",
 };
 
 export const leadConfig = {
   // Free access key from https://web3forms.com - enquiries email straight to you.
   // Leave blank to fall back to mailto/WhatsApp only. See CATALOG_UPDATE_GUIDE.md.
-  web3formsAccessKey: "",
+  web3formsAccessKey: "ac15904b-310c-491f-96ae-fc1ecb9f86bc",
 };
 
 export const heroImage =

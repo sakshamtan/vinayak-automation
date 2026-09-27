@@ -77,6 +77,11 @@ function parseCsv(text) {
   });
 }
 
+function productWhatsappHref(product) {
+  const text = `Hello ${companyInfo.name}, I want pricing for: ${product.name}${product.sku ? ` (SKU: ${product.sku})` : ''}`;
+  return `https://wa.me/${companyInfo.whatsapp}?text=${encodeURIComponent(text)}`;
+}
+
 function productInitials(name) {
   return name
     .split(' ')
@@ -464,7 +469,11 @@ function App() {
                       <p className="card-kicker">
                         {product.category} {product.brand && `· ${product.brand}`}
                       </p>
-                      <h3>{product.name}</h3>
+                      <h3>
+                        {product.sku
+                          ? <a href={`/product/${product.sku}`} style={{ color: 'inherit', textDecoration: 'none' }}>{product.name}</a>
+                          : product.name}
+                      </h3>
                       <p className="text-muted">{product.shortDescription}</p>
                     </div>
 
@@ -477,15 +486,31 @@ function App() {
                         <dt>Status</dt>
                         <dd>{product.availability || 'Available on enquiry'}</dd>
                       </div>
+                      {product.priceRange && (
+                        <div style={{ gridColumn: '1 / -1' }}>
+                          <dt>Price range</dt>
+                          <dd style={{ color: 'var(--accent)' }}>{product.priceRange}</dd>
+                        </div>
+                      )}
                     </dl>
 
-                    <button
-                      className="btn btn-primary"
-                      type="button"
-                      onClick={() => handleSelectProduct(product)}
-                    >
-                      Enquire Price
-                    </button>
+                    <div className="product-card__actions">
+                      <button
+                        className="btn btn-primary"
+                        type="button"
+                        onClick={() => handleSelectProduct(product)}
+                      >
+                        Enquire Price
+                      </button>
+                      <a
+                        className="btn btn-ghost"
+                        href={productWhatsappHref(product)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        WhatsApp
+                      </a>
+                    </div>
                   </div>
                 </article>
               ))}

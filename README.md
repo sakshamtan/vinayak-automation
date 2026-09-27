@@ -1,4 +1,4 @@
-# Vinayak Automation Products - Website
+# Vinayak Automation - Website
 
 A single static website that showcases the product catalogue and captures pricing enquiries as leads. No backend, no database - it deploys as plain static files.
 

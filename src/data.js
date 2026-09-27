@@ -1,5 +1,5 @@
 export const companyInfo = {
-  name: "Vinayak Automation Products",
+  name: "Vinayak Automation",
   tagline: "Industrial automation products, control panels, drives and electrical solutions.",
   phone: "+91-9818092533",
   whatsapp: "919818092533",

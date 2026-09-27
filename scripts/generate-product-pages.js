@@ -18,7 +18,7 @@ const path = require('path');
 // Keep these in sync with src/data.js
 const SITE_URL    = (process.env.SITE_URL || 'https://vinayak-automation.pages.dev').replace(/\/$/, '');
 const WA_NUMBER   = '919818092533';
-const COMPANY     = 'Vinayak Automation Products';
+const COMPANY     = 'Vinayak Automation';
 const ADDRESS     = 'Plot No. 461, Indira Vihar, Dr Mukerjee Nagar, Near BBM Depot, Delhi - 110009';
 const PHONE       = '+91-9818092533';
 const EMAIL       = 'vinayakautomation10@gmail.com';
